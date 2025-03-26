@@ -79,3 +79,18 @@ if( userAge === 'underage') {
 
 })
 
+/* MILESTONE 1
+//Aggiungo l'evento al click
+sendBtnElement = sendBtnElement.addEventListener("click", function(){
+
+    userAge = document.getElementById("age");
+    userAge = userAge.value; //prendo il valore scritto nell'input
+    console.log(userAge);
+
+    userKm = document.getElementById("number");
+    userKm = userKm.value; //prendo il valore scritto nell'input
+    console.log(userKm);
+
+    userKm = parseInt(userKm);                         
+    userAge = parseInt(userAge);      
+
