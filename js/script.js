@@ -92,5 +92,33 @@ sendBtnElement = sendBtnElement.addEventListener("click", function(){
     console.log(userKm);
 
     userKm = parseInt(userKm);                         
-    userAge = parseInt(userAge);      
+    userAge = parseInt(userAge); 
+    
+     if(userAge < 18 ){
+        costoTot = userKm * costoKm; //number
+        console.log(costoTot, typeof costoTot);
+        let scontoTot = (costoTot) * scontoMin;
+        console.log(scontoTot);
+        costoTot = costoTot - scontoTot;
+        console.log(costoTot);
+        document.getElementById("result").innerHTML = `Il costo totale del tuo biglietto è : ${costoTot.toFixed(2)} grazie allo Sconto Minorenne`;
+    } else if(userAge > 65 ){
+        costoTot = userKm * costoKm; //number
+        console.log(costoTot, typeof costoTot);
+        let scontoTot = (costoTot) * scontoAnz;
+        console.log(scontoTot);
+        costoTot = costoTot - scontoTot;
+        console.log(costoTot);
+        document.getElementById("result").innerHTML = `Il costo totale del tuo biglietto è : ${costoTot.toFixed(2)} grazie allo Sconto Over 65`;
+    } else{
+        costoTot = userKm * costoKm;
+        console.log(costoTot);
+        document.getElementById("result").innerHTML = `Il costo totale del tuo biglietto è : ${costoTot.toFixed(2)}, purtroppo non hai accesso a sconti in quanto non sei né Minorenne né Over 65`;
+    }
+    
+    //document.getElementById("result").innerHTML = `Il costo totale del tuo biglietto è : ${costoTot.toFixed(2)}`; Se voglio stampare solo OUTPUT ALLA FINE E NON PER CONDIZIONE SINGOLA
+})
+
+*/
+
 
