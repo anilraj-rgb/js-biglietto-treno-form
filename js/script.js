@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 const costoKm = 0.21;
 let costoTot = 0; 
 const scontoMin = 0.20;
@@ -51,3 +58,24 @@ sendBtnElement = sendBtnElement.addEventListener("click", function(){
     userAge = document.getElementById("age");
     userAge = userAge.value; //usando select Restituisce come valore il valore della option
     console.log(userAge, typeof userAge); 
+
+//Faccio partire la condizione
+if( userAge === 'underage') {
+    costoTot = userKm * costoKm;
+    let scontoTot = costoTot * scontoMin;
+    costoTot = costoTot - scontoTot;
+    document.getElementById("user-Cost").innerHTML = `${costoTot.toFixed(2)} €`;
+} else if( userAge === 'over') {
+    costoTot = userKm * costoKm;
+    let scontoTot = costoTot * scontoAnz;
+    costoTot = costoTot - scontoTot;
+    document.getElementById("user-Cost").innerHTML = `${costoTot.toFixed(2)} €`;
+} else if( userAge === 'adult'){
+    costoTot = userKm * costoKm;
+    document.getElementById("user-Cost").innerHTML = `${costoTot.toFixed(2)} €`;
+} else {
+    alert('Seleziona la tua età ! Non fare il furbo. ');
+}
+
+})
+
