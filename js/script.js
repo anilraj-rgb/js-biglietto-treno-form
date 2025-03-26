@@ -39,3 +39,15 @@ sendBtnElement = sendBtnElement.addEventListener("click", function(){
     console.log(userSurname);
 
     document.getElementById("user-NameSur").innerHTML = `${userName} ${userSurname}`
+
+    //Prendo il valore dei Km
+    userKm = document.getElementById("number");
+    userKm = userKm.value; //string
+    console.log(userKm, typeof userKm);
+    userKm = parseInt(userKm); //number
+    console.log(userKm, typeof userKm);
+
+    //Prendo il valore della fascia d'età
+    userAge = document.getElementById("age");
+    userAge = userAge.value; //usando select Restituisce come valore il valore della option
+    console.log(userAge, typeof userAge); 
