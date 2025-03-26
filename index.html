@@ -9,3 +9,26 @@
 </head>
 <body>
     <div class="container">
+
+        <!-- Calcolo prezzo Biglietto-->
+        <h1 class="txt-center mrg-b-10 txt-wt">CALCOLA IL PREZZO DEL TUO BIGLIETTO : </h1>
+        <div class="centered mrg-b-10 d-flex" id="form-container">
+            <div class="col-30 txt-center">
+                <label for="name-surname" class="txt-cr">Nome Cognome :</label>
+                <input type="text" id="name-surname">
+            </div>
+            
+            <div class="col-30 txt-center">
+                <label for="number" class="txt-cr">Km da percorrere :</label>
+                <input type="text" id="number">
+            </div>
+
+            <div class="col-30 txt-center">
+                <label for="age" class="txt-cr"> Fascia d'età : </label>
+                <select id="age">
+                    <option value="null"></option>
+                    <option value="underage">Minorenne</option>
+                    <option value="adult">Maggiorenne</option>
+                    <option value="over">Over 65</option>
+                </select>
+            </div>
